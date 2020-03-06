@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <style type="text/css">
+        .box {
+            height: 730px;
+            width: 400px;
+            border-style: solid;
+            border-color: lightgrey;
+            border-top-width: 15px;
+            margin-top: 15px;
+        }
+        .box1 {
+            height: 650px;
+            width: 350px;
+            border-style: solid;
+            border-color: lightgrey;
+            margin: 25px;
+        }
+        p {
+            width:120px;
+            margin-top:-15px;
+            margin-left:10px;
+            background: #aae5ff;
+        }
+        .box-title {
+            background: #aae5ff;
+            width: 100px;
+        }
+        .inside {
+            margin: 15px;
+        }
+        #grad2 {
+            background-color: #aae5ff;
+        }
+        #grad1 {
+            background-color: #aae5ff;
+            background-image: linear-gradient(#aae5ff, white);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box" id="grad2">
+        <div class="box1" id="grad1">
+            <div class="box-title">
+                <p>
+                    Uzupełnij dane:
+                </p>
+            </div>
+            <div class="inside">
+                <br>
+                <label for="imie">Imię:</label><br>
+                <input type="text" name="nazwa" id="imie" placeholder="Wprowadź imię">
+                <br>
+                <label for="nazwisko">Nazwisko</label><br>
+                <input type="text" name="nazwa" id="nazwisko" placeholder="Wprowadź nazwisko">
+                <br>
+                Email:
+                <br>
+                <input type="text" name="nazwa" placeholder="Wprowadź email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$">
+                <br>
+                Płeć:
+                <br>
+                <input type="radio" name="nazwa" value="wartość" checked> Kobieta
+
+                <input type="radio" name="nazwa" value="wartość"> Mężczyzna:
+                <br>
+                Opis:
+                <br>
+                <textarea rows="4" cols="35"></textarea>
+                <br>
+                Wiek:
+                <br>
+                <input type="number" name="nazwa" value="wartość">
+                <br>
+                Stan cywilny:
+                <br>
+                <select>
+                    <option value="wartość1">Panna</option>
+                    <option value="wartość2">Kawaler</option>
+                    <option value="wartość3">Żonaty</option>
+                    <option value="wartość4">Zamężna</option>
+                </select>
+                <br><br>
+                <button type="text" value="Wyczysc">Wyczyść</button>
+                <button type="text" value="Wyslij" style="width: 80px">Wyślij</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
