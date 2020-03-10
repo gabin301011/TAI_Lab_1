@@ -6,92 +6,99 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" type="text/css" />
     <style type="text/css">
+        * {
+            margin-top: 0;
+        }
         .box {
-            height: 730px;
-            width: 400px;
-            border-style: solid;
-            border-color: lightgrey;
-            border-top-width: 15px;
-            margin-top: 15px;
+            height: 880px;
+            width: 600px;
+            position: relative;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: auto;
         }
         .box1 {
-            height: 650px;
-            width: 350px;
+            height: 810px;
+            width: 450px;
             border-style: solid;
-            border-color: lightgrey;
-            margin: 25px;
-        }
-        p {
-            width:120px;
-            margin-top:-15px;
-            margin-left:10px;
-            background: #aae5ff;
+            border-color: dimgray;
+            position: absolute;
+            margin-left: 75px;
+            margin-right: 75px;
+            margin-top: 40px;
         }
         .box-title {
-            background: #aae5ff;
-            width: 100px;
+            width: 300px;
+            margin-top: -20px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-size: 25px;
         }
         .inside {
             margin: 15px;
         }
-        #grad2 {
-            background-color: #aae5ff;
+        .buttonLook {
+            width: 200px;
         }
-        #grad1 {
-            background-color: #aae5ff;
-            background-image: linear-gradient(#aae5ff, white);
+        .wallpaper {
+            background-image: url("wall.jpg");
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
     </style>
 </head>
-<body>
-<div class="container">
-    <div class="box" id="grad2">
-        <div class="box1" id="grad1">
-            <div class="box-title">
+<body class="wallpaper">
+    <div class="box bg-dark ">
+        <div class="box1 bg-dark">
+            <div class="box-title bg-dark text-white">
                 <p>
-                    Uzupełnij dane:
+                    <b>Uzupełnij dane:</b>
                 </p>
-            </div>
-            <div class="inside">
-                <br>
-                <label for="imie">Imię:</label><br>
-                <input type="text" name="nazwa" id="imie" placeholder="Wprowadź imię">
-                <br>
-                <label for="nazwisko">Nazwisko</label><br>
-                <input type="text" name="nazwa" id="nazwisko" placeholder="Wprowadź nazwisko">
-                <br>
-                Email:
-                <br>
-                <input type="text" name="nazwa" placeholder="Wprowadź email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$">
-                <br>
+            </div><br>
+            <form class="inside text-white">
+                <div class="form-group">
+                    <label for="imie">Imie</label>
+                    <input type="email" class="form-control" id="imie">
+                </div>
+                <div class="form-group">
+                    <label for="nazwisko">Nazwisko</label>
+                    <input type="text" class="form-control" id="nazwisko">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$">
+                </div>
                 Płeć:
                 <br>
                 <input type="radio" name="nazwa" value="wartość" checked> Kobieta
 
-                <input type="radio" name="nazwa" value="wartość"> Mężczyzna:
+                <input type="radio" name="nazwa" value="wartość"> Mężczyzna
                 <br>
-                Opis:
-                <br>
-                <textarea rows="4" cols="35"></textarea>
-                <br>
-                Wiek:
-                <br>
-                <input type="number" name="nazwa" value="wartość">
-                <br>
-                Stan cywilny:
-                <br>
-                <select>
-                    <option value="wartość1">Panna</option>
-                    <option value="wartość2">Kawaler</option>
-                    <option value="wartość3">Żonaty</option>
-                    <option value="wartość4">Zamężna</option>
-                </select>
-                <br><br>
-                <button type="text" value="Wyczysc">Wyczyść</button>
-                <button type="text" value="Wyslij" style="width: 80px">Wyślij</button>
-            </div>
+                <div class="form-group">
+                    <label for="comment">Opis</label>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="wiek">Wiek</label>
+                    <input type="number" class="form-control" id="wiek">
+                </div>
+                <div class="form-group">
+                    <label for="stanCywilny">Stan cywilny</label>
+                    <select id="stanCywilny" class="form-control">
+                        <option selected>Wybierz...</option>
+                        <option>Panna</option>
+                        <option>Kawaler</option>
+                        <option>Zamężna</option>
+                        <option>Żonaty</option>
+                    </select>
+                </div>
+                <button type="reset" class="btn btn-success btn-sm buttonLook">Wyczyść</button>
+                <button type="submit" class="btn btn-success btn-sm buttonLook">Wyślij</button>
+            </form>
         </div>
     </div>
-</div>
 </body>
 </html>
