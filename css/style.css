@@ -1,3 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
+.scroll {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+}
 body {
     background-image: url("wall.jpg");
     width: 100%;
