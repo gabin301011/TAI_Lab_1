@@ -1,3 +1,19 @@
+.list-group-item {
+    cursor: pointer;
+}
+
+.corrects {
+    background-color: #289a27;
+}
+
+.incorrects {
+    background-color: #c41a21;
+}
+
+.buttons {
+    padding: 10px 10px 10px 0;
+}
+
 html {
     scroll-behavior: smooth;
 }

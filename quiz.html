@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
     <meta charset="UTF-8">
     <title>Quiz</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -11,11 +11,55 @@
     />
 </head>
 <body>
-<div class="navbar"></div>
+<nav class=" navbars navbar navbar-expand-lg navbar-dark bg-dark"></nav>
+<div class="container table list bg-dark text-white">
+    <br>
+    Question: <span id="idx"></span> <h4 class="question"></h4>
+
+    Answers:
+    <ul class="list-group text-dark">
+        <li class="list-group-item"></li>
+        <li class="list-group-item"></li>
+        <li class="list-group-item"></li>
+        <li class="list-group-item"></li>
+    </ul>
+
+    <div class="buttons">
+        <button class="btn btn-danger previous" style="width: 90px">Previous</button>
+        <button class="btn btn-success next" style="width: 90px">Start</button>
+    </div>
+
+    <h4>Your score: <span class="score">0</span>/20 points.</h4><br>
+</div>
+<div class="container results bg-dark text-white" style="display: none">
+    <br>
+    <div class="btn-group-custom">
+        <button class="btn btn-success btn-custom restart">Retake quiz</button>
+    </div>
+    <div class="score">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Point/20</th>
+                <th>Average</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Your score</th>
+                <td class="userScorePoint"></td>
+                <td class="average"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 <div>
     <button class="scroll btn btn-success" style="display: none"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i>  Do góry</button>
 </div>
 </body>
 <script src="js/navbar.js"></script>
 <script src="js/scroll.js"></script>
+<script src="js/script.js"></script>
 </html>
